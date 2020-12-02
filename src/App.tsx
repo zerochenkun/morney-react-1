@@ -5,7 +5,10 @@ import {
   Route,
   Redirect
 } from "react-router-dom";
-import Layout from "components/Layout";
+import Money from "views/Money";
+import Tags from "views/Tags";
+import Statistics from "views/Statistics";
+import NoMatch from "views/NoMatch";
 
 
 export default function App() {
@@ -28,33 +31,4 @@ export default function App() {
       </Switch>
     </Router>
   );
-}
-
-function Money() {
-  return (
-    <Layout>
-      <h2>Money</h2>
-    </Layout >
-  )
-}
-
-function Tags() {
-  return (
-    <Layout>
-      <h2>Tags</h2>
-    </Layout>
-
-
-  )
-}
-
-function Statistics() {
-  return (
-    <Layout>
-      <h2>Statistics</h2>
-    </Layout>
-  )
-}
-function NoMatch() {
-  return <h2>地址错误</h2>;
 }
