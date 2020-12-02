@@ -3,10 +3,11 @@ import {
   HashRouter as Router,
   Switch,
   Route,
-  Link,
   Redirect
 } from "react-router-dom";
 import styled from 'styled-components'
+import Nav from './components/Nav'
+
 const Wrapper = styled.div`
   height:100vh;
   display:flex;
@@ -17,17 +18,7 @@ const Main = styled.div`
   flex-grow:1;
   overflow:auto;
 `
-const Nav = styled.div`
-  border:1px solid red;
-  > ul{
-    display:flex;
-    > li{
-       width:33.333333%;
-       text-align:center;
-       padding:16px;
-    }
-  }
-`
+
 
 export default function App() {
   return (
@@ -43,19 +34,7 @@ export default function App() {
           </Switch>
         </Main>
 
-        <Nav>
-          <ul>
-            <li>
-              <Link to="/money">Money</Link>
-            </li>
-            <li>
-              <Link to="/tags">Tags</Link>
-            </li>
-            <li>
-              <Link to="/statistics">Statistics</Link>
-            </li>
-          </ul>
-        </Nav>
+        <Nav />
       </Wrapper>
     </Router>
   );
