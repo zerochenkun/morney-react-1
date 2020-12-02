@@ -16,6 +16,15 @@ const NavWrapper = styled.div`
        width:33.333333%;
        text-align:center;
        padding:16px;
+       display:flex;
+       flex-direction:column;
+       justify-content:center;
+       align-items:center;
+       padding:4px 0;
+       .icon{
+           width:24px;
+           height:24px;
+       }
     }
   }
 `
@@ -27,19 +36,19 @@ const Nav = () => {
                     <svg className="icon">
                         <use xlinkHref="#money" />
                     </svg>
-                    <Link to="/money">Money</Link>
+                    <Link to="/money">记账</Link>
                 </li>
                 <li>
                     <svg className="icon">
                         <use xlinkHref="#label" />
                     </svg>
-                    <Link to="/tags">Tags</Link>
+                    <Link to="/tags">标签</Link>
                 </li>
                 <li>
                     <svg className="icon">
                         <use xlinkHref="#chart" />
                     </svg>
-                    <Link to="/statistics">Statistics</Link>
+                    <Link to="/statistics">统计</Link>
                 </li>
             </ul>
         </NavWrapper>
